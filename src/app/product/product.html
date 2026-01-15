@@ -1,0 +1,82 @@
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+<body>
+
+<div class="container">
+
+  
+    <div class="product">
+
+
+  <div class="thumbnails">
+    <img *ngFor="let img of product.images" [src]="img" [class.active]="img === mainImage" (click)="selectImage(img)">
+  </div>
+
+  <div class="main-image">
+    <img [src]="mainImage" alt="{{ product.name }}">
+  </div>
+
+  <div class="details">
+    <h2>{{ product.name }}</h2>
+    <div class="price">₹{{ product.price }}</div>
+
+
+    <div class="size-section">
+      <p>SIZE</p>
+      <div class="sizes">
+        <button *ngFor="let size of sizes" 
+                [class.selected]="product.selectedSize === size" 
+                (click)="selectSize(size)">
+          {{ size }}
+        </button>
+      </div>
+    </div>
+<br>
+  
+    <div class="info-row">
+      
+      <h3>QUANTITY</h3>
+    </div>
+    <div class="quantity-box">
+      <button (click)="decreaseQty()">-</button>
+      <input type="text" [value]="product.quantity" readonly>
+      <button (click)="increaseQty()">+</button>
+    </div>
+    <br>
+<div>
+    <a class="add-to-cart" (click)="addToCart()">ADD TO CART</a></div>
+
+
+    <div class="meta">
+        <br>
+      <div>
+        <i class="fa-solid fa-truck"></i>
+        <span>Delivery & Return</span>
+      </div>
+      <br>
+      <div>
+        <i class="fa-solid fa-calendar-days"></i>
+        <span>Estimated: 5–7 Working Days</span>
+      </div>
+    </div>
+  </div>
+</div>
+
+</div>
+
+<div class="related" align="center">
+  <h3>Related Products</h3>
+  <div class="related-grid">
+    <div class="related-item" *ngFor="let related of relatedProducts">
+      <img [src]="related.image" alt="{{ related.name }}">
+      <p class="related-name">{{ related.name }}</p>
+      <p class="related-price">₹ {{ related.price }}</p>
+    </div>
+  </div>
+</div>
+
+
+</body>
+
+
+

@@ -1,0 +1,312 @@
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.fashion-banner {
+    background: #5b0f0f;
+    padding: 20px 0;
+}
+
+.banner-inner {
+    max-width: 1200px;
+    margin: auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.banner-img img {
+    width: 160px;
+    height: auto;
+    display: block;
+    background: #fff;
+    padding: 8px;
+}
+
+/* Center Content */
+.banner-content {
+    text-align: center;
+    color: #fff;
+    flex: 2;
+}
+
+.logo-circle {
+    width: 120px;
+    height: 120px;
+    background: #e5e5e5;
+    border-radius: 50%;
+    margin: 0 auto 25px;
+}
+
+.tagline {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 15px;
+    letter-spacing: 0.5px;
+}
+
+.contact {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    font-size: 16px;
+}
+
+.contact i {
+    margin-right: 6px;
+}
+
+@media (max-width: 768px) {
+    .banner-inner {
+        flex-direction: column;
+    }
+
+    .banner-img img {
+        width: 140px;
+    }
+
+    .contact {
+        flex-direction: column;
+        gap: 8px;
+    }
+}
+
+header {
+    background-color: rgb(43, 10, 10);
+    color: white;
+    padding: 10px;
+    text-align: center;
+    margin-top: 20px;
+    margin-bottom: 10px;
+    margin-left:40px;
+    margin-right:40px;
+  }
+h2{
+  font-size: 27px;
+}
+
+/* Wrapper around the carousel and arrows */
+.wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 10px 0;
+  
+}
+
+/* Scrollable carousel container */
+.carousel {
+  display: flex;
+  gap: 10px;
+  overflow-x: auto;             /* Enables horizontal scroll */
+  scroll-behavior: smooth;       /* Smooth scrolling when buttons are clicked */
+  padding: 0 10px;
+}
+
+/* Hide scrollbar (optional) */
+.carousel::-webkit-scrollbar {
+  display: none;                 /* Hides scrollbar in WebKit browsers */
+}
+
+/* Each card */
+.card {
+  list-style: none;
+  min-width: 200px;            
+  text-align: center;
+  cursor: pointer;
+  transition: transform 0.2s;
+}
+
+
+/* Card image */
+.card .img img {
+  width: 170px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+/* Card title */
+.card h2 {
+  font-size: 14px;
+  margin-top: 8px;
+  font-weight: bold;
+  color: #333;
+}
+
+#left-arrow,
+#right-arrow {
+  background: none;       /* no background box */
+  border: none;           /* no border outline */
+  padding: 20;             /* remove extra spacing */
+  cursor: pointer;        /* pointer cursor */
+  font-size: 20px;        /* control arrow size */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+/* Image icons inside arrows */
+#left-arrow img,
+#right-arrow img {
+  width: 60px;   /* smaller size for arrow icons */
+  height: 60px;
+}
+@media screen and (max-width: 1200px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 3) - 8px);
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .wrapper .carousel {
+    grid-auto-columns: calc((100% / 2) - 9px);
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .wrapper .carousel {
+    grid-auto-columns: 100%;
+  }
+}
+
+ 
+a{
+  text-decoration: none;
+}
+
+/* Layout */
+.section {
+    margin-bottom: 40px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 15px;
+}
+
+/* Section Title */
+.section-title {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 20px;
+}
+
+.section-title h4 {
+    margin: 0 15px;
+    font-size: 20px;
+    font-weight: 600;
+}
+
+.section-title .line {
+    flex: 1;
+    height: 1px;
+    background-color: #3A241A;
+}
+
+/* Product Grid */
+.product-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+    text-align: center;
+}
+
+/* Image */
+
+.product-image {
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 320px;          
+    object-fit: cover;    
+    display: block;
+}
+
+.badge {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: #000;
+    color: #fff;
+    font-size: 12px;
+    padding: 4px 8px;
+}
+
+/* Cart Button */
+.btn-cart {
+    display: block;
+    margin-top: 10px;
+    text-decoration: none;
+    color: #000;
+    font-weight: 500;
+}
+
+/* Info */
+.product-info {
+    margin-top: 10px;
+}
+
+.product-name {
+    font-size: 15px;
+    margin-bottom: 5px;
+}
+
+.product-price {
+    font-weight: bold;
+}
+
+/* View More */
+.view-more {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.btn-outline {
+    padding: 8px 20px;
+    border: 1px solid #000;
+    text-decoration: none;
+    color: #000;
+    border-radius: 4px;
+}
+.wishlist-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-size: 22px;
+    color: #555;
+    background: #fff;
+    padding: 8px;
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.wishlist-icon:hover {
+    color: red;
+}
+
+.wishlist-icon.active {
+    color: red;
+}
