@@ -7,6 +7,7 @@ interface CartItem {
   qty: number;
   total: number;
   size?: string;
+  image: string;
 }
 
 @Component({

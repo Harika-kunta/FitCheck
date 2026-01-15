@@ -6,7 +6,7 @@
 <div class="section">
     <div class="container">
 
-        <div class="product-grid">
+        <!-- <div class="product-grid">
 
             <div class="product-card">
                 <div class="product-image">
@@ -182,10 +182,26 @@
                     <h3 class="product-name">XYZ82</h3>
                     <span class="product-price">₹1,899</span>
                 </div>
+            </div> -->
+
+<div class="product-grid">
+
+            <div class="product-card" *ngFor="let product of products" [routerLink]="['/product', product.id]">
+                <div class="product-image">
+                   <i class="fa-regular fa-heart wishlist-icon"
+                [ngClass]="isInWishlist(product.id) ? 'fa-solid active' : 'fa-regular'"
+           (click)="toggleWishlist(product)"></i>
+                    <a href="javascript:void(0)">
+
+                        <img [src]="product.image" alt="{{ product.name }}"></a></div>
+
+                <div class="product-info">
+                    <h3>{{product.name}}</h3>
+                    <span>₹{{ product.price }}</span>
+                </div>
             </div>
-
-
         </div>
+
 
         <div class="view-more">
             <a href="" class="btn-outline">

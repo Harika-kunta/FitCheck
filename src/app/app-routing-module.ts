@@ -25,7 +25,7 @@ const routes: Routes = [
   {path:"ethnic",component:Ethnic},
   {path:"traditional",component:Traditional},
   {path:"western",component:Western},
-  {path:"product",component:Product},
+  {path:"product/:id",component:Product},
   {path:"contact",component:Contact},
   {path:"login",component:Login},
   {path:"cart",component:Cart},
