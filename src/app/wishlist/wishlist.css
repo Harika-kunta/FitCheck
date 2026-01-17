@@ -87,3 +87,9 @@ input{
 }
 
 
+/* Responsive tweaks */
+@media (max-width: 600px) {
+    .wishlist-card img {
+        height: 150px;
+    }
+}

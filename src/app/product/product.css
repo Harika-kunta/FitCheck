@@ -179,3 +179,19 @@
 
     
    
+/* RESPONSIVE */
+    @media (max-width: 900px) {
+        .product {
+            grid-template-columns: 1fr;
+        }
+
+        .thumbnails {
+            display: flex;
+            gap: 10px;
+        }
+
+        .thumbnails img {
+            margin-bottom: 0;
+            width: 80px;
+        }
+    }
