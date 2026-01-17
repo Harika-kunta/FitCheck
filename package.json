@@ -4,10 +4,13 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build && ng run FitCheck:server",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "serve:ssr:FitCheck": "node dist/FitCheck/server/server.mjs"
+    "serve:ssr": "node dist/server/server.mjs"
+  },
+   "engines": {
+    "node": "18.x"
   },
   "prettier": {
     "printWidth": 100,

@@ -6,6 +6,10 @@ import {
 } from '@angular/ssr/node';
 import express from 'express';
 import { join } from 'node:path';
+import { fileURLToPath } from 'node:url';
+
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = __filename ? __filename.replace(/\\/g, '/').replace(/\/[^\/]+$/, '') : '.';
 
 const browserDistFolder = join(import.meta.dirname, '../browser');
 
