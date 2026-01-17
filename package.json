@@ -10,7 +10,7 @@
     "serve:ssr": "node dist/server/server.mjs"
   },
    "engines": {
-    "node": "18.x"
+    "node": "20.x"
   },
   "prettier": {
     "printWidth": 100,
