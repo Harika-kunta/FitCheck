@@ -93,7 +93,7 @@ export class Product implements OnInit {
     {id: 70, name: 'XYZ70',price: 1295,images:['https://rukminim2.flixcart.com/image/612/612/xif0q/dress/y/q/r/-original-imahff9hkv5bqwjv.jpeg?q=70','','',''], quantity: 1},
     {id: 71, name: 'XYZ71',price: 1495,images:['https://rukminim2.flixcart.com/image/612/612/xif0q/dress/2/a/o/l-12463-sheetal-associates-original-imahhm3cmsazx55u.jpeg?q=70','','',''], quantity: 1},
     {id: 72, name: 'XYZ72',price: 1299,images:['https://rukminim2.flixcart.com/image/612/612/xif0q/dress/l/6/l/s-aa-00217-sky-blue-aayu-original-imah7rqytztrgrez.jpeg?q=70','','',''], quantity: 1}
-
+    
 
   ];
   

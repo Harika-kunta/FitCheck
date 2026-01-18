@@ -12,7 +12,7 @@
                 <div class="product-image">
                    <i class="fa-regular fa-heart wishlist-icon"
                 [ngClass]="isInWishlist(product.id) ? 'fa-solid active' : 'fa-regular'"
-           (click)="toggleWishlist(product)"></i>
+           (click)="toggleWishlist(product); $event.stopPropagation()"></i>
                     <a href="javascript:void(0)">
 
                         <img [src]="product.image" alt="{{ product.name }}"></a></div>
