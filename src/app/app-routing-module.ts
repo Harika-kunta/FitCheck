@@ -16,6 +16,7 @@ import { Sarees } from './sarees/sarees';
 import { Frocks } from './frocks/frocks';
 import { Cart } from './cart/cart';
 import { Wishlist } from './wishlist/wishlist';
+import { About } from './about/about';
 
 const routes: Routes = [
   {path:"",component:Main},
@@ -27,6 +28,7 @@ const routes: Routes = [
   {path:"western",component:Western},
   {path:"product/:id",component:Product},
   {path:"contact",component:Contact},
+  {path:"about",component:About},
   {path:"login",component:Login},
   {path:"cart",component:Cart},
   {path: "wishlist",component:Wishlist}

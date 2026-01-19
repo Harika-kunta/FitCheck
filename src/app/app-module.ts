@@ -17,6 +17,7 @@ import { Sarees } from './sarees/sarees';
 import { Frocks } from './frocks/frocks';
 import { Cart } from './cart/cart';
 import { Wishlist } from './wishlist/wishlist';
+import { About } from './about/about';
 
 @NgModule({
   declarations: [
@@ -34,7 +35,8 @@ import { Wishlist } from './wishlist/wishlist';
     Sarees,
     Frocks,
     Cart,
-    Wishlist
+    Wishlist,
+    About
   ],
   imports: [
     BrowserModule,

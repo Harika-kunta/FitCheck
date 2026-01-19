@@ -1,15 +1,24 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
 .breadcrumb-container {
-   position: absolute;
-   left: 50%;
-   transform: translateX(-50%);
-   font-size: 20px;
-   margin-top: 30px;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+  font-size: 16px;
+  gap: 6px;
             
         }
 
   .breadcrumb-container a {
     text-decoration: none;
     color: #333;
+    font-weight: 500;
+  transition: 0.3s;
     }
 
   .breadcrumb-container span {
@@ -17,7 +26,7 @@
    }
 
   .breadcrumb-container a:hover {
-  text-decoration: underline;
+  color: #b24c4c;
   }
 
         a{
@@ -25,16 +34,17 @@
 }
 .contact-section {
   text-align: center;
-  padding: 10px 20px;
-  background-color: #ffffff;
+  padding: 40px 20px 20px 20px;
+  background: linear-gradient(135deg, #ffe6eb, #fff);
   color: #3a241a;
   margin-top: 50px ;
   font-family: Arial, sans-serif;
 }
 
 .contact-section h1 {
-  font-size: 2em;
+  font-size: 2.5em;
   margin-bottom: 10px;
+  color: #863b3b;
 }
 
 .contact-section p {
@@ -42,47 +52,75 @@
   color: black;
 }
 
+.contact-info-card {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
 .contact-info {
     
-  max-width: 600px;
+  width: 600px;
   margin: 10px auto;
   text-align: center;
-  font-family: Arial, sans-serif;
-  background: #ffffff;
+  background: rgba(255,255,255,0.95);
+  padding: 40px 30px;
+  border-radius: 20px;
+  box-shadow: 0 15px 40px rgba(0,0,0,0.1);
   color: black;
 }
 
 .contact-info h2 {
   font-size: 1.3em;
-  margin-top: 10px;
+  margin-top: 30px;
+  margin-bottom: 30px;
   color:black;
 }
 
 .contact-info p {
   margin: 5px 0 15px;
   font-size: 1em;
+  color: #333;
 }
 
 .contact-info a {
   color: black;
   text-decoration: none;
+  transition: 0.3s;
 }
 
 .contact-info a:hover {
   text-decoration: underline;
 }
 
-
-.social-links a {
-  margin: 0 20px;
-  color: black;
-  font-weight: 500;
+.social-links {
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
 }
 
-.social-links a:hover {
-  color: #222121;
+.social-links a img.icon {
+  height: 50px;
+  width: 50px;
+  transition: 0.3s;
 }
-.icon {
-  height: 60px;
-  width: 60px;
+
+.social-links a img.icon:hover {
+  transform: scale(1.1);
+}
+@media (max-width: 768px) {
+  .contact-info {
+    width: 90%;
+    padding: 30px 20px;
+  }
+
+  .contact-section h1 {
+    font-size: 2em;
+  }
+
+  .social-links a img.icon {
+    height: 45px;
+    width: 45px;
+  }
 }
