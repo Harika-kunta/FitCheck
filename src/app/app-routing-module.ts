@@ -17,6 +17,9 @@ import { Frocks } from './frocks/frocks';
 import { Cart } from './cart/cart';
 import { Wishlist } from './wishlist/wishlist';
 import { About } from './about/about';
+import { Dashboard } from './dashboard/dashboard';
+import { AuthGuard } from './auth-guard';
+import { Register } from './register/register';
 
 const routes: Routes = [
   {path:"",component:Main},
@@ -31,11 +34,14 @@ const routes: Routes = [
   {path:"about",component:About},
   {path:"login",component:Login},
   {path:"cart",component:Cart},
-  {path: "wishlist",component:Wishlist}
-
+  {path: "wishlist",component:Wishlist},
+  { path: "dashboard", component: Dashboard, canActivate: [AuthGuard] },
+{ path: '', redirectTo: '/login', pathMatch:'full'},
+{path:"register",component:Register}
 ];
 
 @NgModule({
+  
   imports: [RouterModule.forRoot(routes)],
   exports: [RouterModule]
 })

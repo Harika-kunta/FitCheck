@@ -1,5 +1,7 @@
 import { NgModule} from '@angular/core';
 import { BrowserModule} from '@angular/platform-browser';
+import { FormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing-module';
 import { AppComponent } from './app.component';
@@ -18,6 +20,8 @@ import { Frocks } from './frocks/frocks';
 import { Cart } from './cart/cart';
 import { Wishlist } from './wishlist/wishlist';
 import { About } from './about/about';
+import { Dashboard } from './dashboard/dashboard';
+import { Register } from './register/register';
 
 @NgModule({
   declarations: [
@@ -36,10 +40,14 @@ import { About } from './about/about';
     Frocks,
     Cart,
     Wishlist,
-    About
+    About,
+    Dashboard,
+    Register
   ],
   imports: [
     BrowserModule,
+    FormsModule,
+    HttpClientModule,
     AppRoutingModule
   ],
   providers: [
