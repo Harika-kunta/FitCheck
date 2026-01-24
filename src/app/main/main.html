@@ -146,7 +146,7 @@
             <div class="product-card" *ngFor="let product of products" [routerLink]="['/product', product.id]">
                 <div class="product-image"   (mouseenter)="openPopup(product)"
        (mouseleave)="closePopup()">
-                    <span class="badge">New</span>
+                   
                    <i class="fa-regular fa-heart wishlist-icon"
                 [ngClass]="isInWishlist(product.id) ? 'fa-solid active' : 'fa-regular'"
            (click)="toggleWishlist(product); $event.stopPropagation()"></i>

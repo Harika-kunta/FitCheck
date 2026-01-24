@@ -1,84 +1,26 @@
-<div class="container" *ngIf="cartItems.length === 0">
+<h2>My Orders</h2>
+<div class="container" *ngIf="orders.length === 0">
     <div class="card emptyCart">
     </div>
     <div class="center">
       <img src="data:image/png;base64,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" alt="">
-      <h4>Your Cart is empty!!</h4>
-      <button class="btn btn-primary" routerLink="/">Shop Now</button>
+      <h4>Haven't Ordered Anything yet!!</h4>
+      <button class="btn btn-primary" routerLink="/">Order Now</button>
     </div>
   </div>
 
 
 
-<div class="cart-container" *ngIf="cartItems.length > 0">
-
-  <div class="cart">
-    <div class="cart-header">
-      <h2>Shopping Cart</h2>
+<div *ngFor="let item of orders" class="order-item" style="border-bottom: 1px solid #ccc; margin-bottom: 10px; padding-bottom: 10px;">
+  <div style="display: flex; align-items: center;">
+    <img *ngIf="item.image" [src]="item.image" alt="{{item.prodName}}" width="80" style="margin-right: 15px;" />
+    <div>
+      <p>Order Id: {{item.prodName}}</p>
+      <p>Price: ₹{{item.price}}</p>
+      <p>Quantity: {{item.qty}}</p>
+      <p *ngIf="item.size">Size: {{item.size}}</p>
+      <p>Total: ₹{{item.total}}</p>
     </div>
-
-    <div class="cart-table" >
-      <div class="cart-row header">
-        <span>Product Details</span>
-        <span>Quantity</span>
-        <span>Price</span>
-        <span>Total</span>
-      </div>
-
-      <div class="cart-row" *ngFor="let item of cartItems">
-        <div class="product">
-          <img [src]="item.image">
-
-          <div>
-            <h4>{{item.prodName}}</h4>
-            <p *ngIf="item.size">Size: {{ item.size }}</p>
-            <div>
-                <button class="btn btn-danger" (click)="removeProduct(item)">Remove</button>
-              </div>
-          </div>
-        </div>
-
-        <div class="qty">
-      <button (click)="decreaseQty(item)">-</button>
-      <span>{{ item.qty }}</span>
-      <button (click)="increaseQty(item)">+</button>
-    </div>
-
-        <span>₹{{item.price}}</span>
-        <span>₹{{item.total | number:'1.2-2' }}</span>
-      
-      </div>
-    </div>
-
-    <a href="#" class="continue">← Continue Shopping</a>
-  </div>
-
-  <div class="summary">
-    <h3>Order Summary</h3>
-
-    <div class="summary-row">
-      <span>Subtotal : </span>
-      <span>₹{{grandTotal | number:'1.2-2' }}</span>
-    </div>
-
-    <div class="summary-row">
-      <span>Shipping</span>
-      <span>Free</span>
-    </div>
-
-    <input type="text" placeholder="Enter your code">
-    <button class="apply">APPLY</button>
-
-    <div class="summary-total">
-      <span> Grand Total</span>
-      <span>₹{{Amount | number:'1.2-2'}}</span>
-    </div>
-
-    <button class="checkout" id="checkoutBtn" (click)="checkout()">CHECKOUT</button>
   </div>
 </div>
-
-
-
-
 

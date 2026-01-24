@@ -20,6 +20,8 @@ import { About } from './about/about';
 import { Dashboard } from './dashboard/dashboard';
 import { AuthGuard } from './auth-guard';
 import { Register } from './register/register';
+import { Order } from './order/order';
+
 
 const routes: Routes = [
   {path:"",component:Main},
@@ -36,8 +38,10 @@ const routes: Routes = [
   {path:"cart",component:Cart},
   {path: "wishlist",component:Wishlist},
   { path: "dashboard", component: Dashboard, canActivate: [AuthGuard] },
-{ path: '', redirectTo: '/login', pathMatch:'full'},
-{path:"register",component:Register}
+  { path: '', redirectTo: '/login', pathMatch:'full'},
+  {path:"register",component:Register},
+  {path:"order",component:Order} , 
+
 ];
 
 @NgModule({

@@ -22,6 +22,8 @@ import { Wishlist } from './wishlist/wishlist';
 import { About } from './about/about';
 import { Dashboard } from './dashboard/dashboard';
 import { Register } from './register/register';
+import { Order } from './order/order';
+
 
 @NgModule({
   declarations: [
@@ -42,7 +44,10 @@ import { Register } from './register/register';
     Wishlist,
     About,
     Dashboard,
-    Register
+    Register,
+    Order,
+   
+   
   ],
   imports: [
     BrowserModule,
