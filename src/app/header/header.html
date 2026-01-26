@@ -49,7 +49,20 @@
     </nav>
 
     <div class="header-icons">
-      <a href="#" class="search"><i class="fa fa-search"></i></a>
+      
+<button (click)="toggleSearch()">
+  <i class="fa fa-search"></i>
+</button>
+
+<div *ngIf="showSearch" class="search-box">
+  <input type="text" placeholder="Search..." [(ngModel)]="searchText" (input)="onSearch()" />
+<ul *ngIf="filteredItems.length > 0">
+    <li *ngFor="let item of filteredItems" (click)="navigate(item)" >
+      {{ item.name }}
+    </li>
+  </ul>
+</div>
+
       <a routerLink="wishlist" class="wishlist"><i class="fa fa-heart"></i></a>
       <a routerLink="cart" class="cart"><i class="fa fa-shopping-cart"></i></a>
       <a routerLink="order" class="order"><i class="fa fa-list-alt"></i></a>
